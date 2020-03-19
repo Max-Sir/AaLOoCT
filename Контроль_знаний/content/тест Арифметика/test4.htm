@@ -1,0 +1,325 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META HTTP-EQUIV="Content-Language" CONTENT="ru">
+<title>Тест №4</title>
+</head>
+
+<body>
+<center><h3>Тест №4</h3></center>
+<span style='font-size:12.0pt;margin-left: 65%'>
+<script type="text/javascript">
+
+var questions=[
+{
+	text: "Над числами: <br>Мн=0,10011<br>Мт=0,11101<br>выполнить умножение (алгоритм А).<br>Сумма &#931&#7522 состоит из пятиразрядного сумматора и пятиразрядного регистра множителя,<br> где разряды множителя заменены нулями.",
+	Answer: "0,1000100111"
+},
+{
+	text: "Над числами: <br>Мн=0,00111<br>Мт=0,01101<br>выполнить умножение (алгоритм Б)",
+	Answer: "0,0001011011"
+},
+{
+	text: "Над числами: <br>Мн=0,10111<br>Мт=0,01101<br>выполнить умножение (алгоритм В)",
+	Answer: "0,0100101011"
+},
+{
+	text: "Над числами: <br>Мн=0,10110<br>Мт=0,11011<br>выполнить умножение (алгоритм Г)",
+	Answer: "0,1001010010"
+}
+];
+
+var comments=[	
+//Алгоритм А
+	[{
+		text: String.fromCharCode(32, 931, 8320),	//сигма ноль
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8321, 32, 61, 32, 1052, 1085, 183, 98, 8325),	//первое частичное произведение
+		Answer: "0,1001100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321),	//сигма один
+		Answer: "0,1001100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321, 183, 50, 8315, 185),	//сдвинутое сигма один
+		Answer: "0,0100110000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8322, 32, 61, 32, 1052, 1085, 183, 98, 8324),	//второе частичное произведение
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322),	//сигма два
+		Answer: "0,0100110000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322, 183, 50, 8315, 185),	//сдвинутое сигма два
+		Answer: "0,0010011000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8323, 32, 61, 32, 1052, 1085, 183, 98, 8323),	//третье частичное произведение
+		Answer: "0,1001100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323),	//сигма три
+		Answer: "0,1011111000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323, 183, 50, 8315, 185),	//сдвинутое сигма три
+		Answer: "0,0101111100"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8324, 32, 61, 32, 1052, 1085, 183, 98, 8322),	//четвёртое частичное произведение
+		Answer: "0,1001100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324),	//сигма четыре
+		Answer: "0,1111011100"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324, 183, 50, 8315, 185),	//сдвинутое сигма четыре
+		Answer: "0,0111101110"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8325, 32, 61, 32, 1052, 1085, 183, 98, 8321),	//пятое частичное произведение
+		Answer: "0,1001100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8325),	//сигма пять
+		Answer: "1,0001001110"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8325, 183, 50, 8315, 185, 32, 61, 32, 1052, 1085, 183, 1052, 1090),	//сдвинутое сигма пять
+		Answer: "0,1000100111"
+	}],
+//Алгоритм Б
+	[{
+		text: String.fromCharCode(32, 931, 8320),	//сигма ноль
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8321, 32, 61, 32, 1052, 1085, 183, 98, 8325, 183, 50, 8304),	//первое частичное произведение
+		Answer: "0,0000000111"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321),	//сигма один
+		Answer: "0,0000000111"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8322, 32, 61, 32, 1052, 1085, 183, 98, 8324, 183, 50, 185),	//второе частичное произведение
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322),	//сигма два
+		Answer: "0,0000000111"
+		
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8323, 32, 61, 32, 1052, 1085, 183, 98, 8323, 183, 50, 178),	//третье частичное произведение
+		Answer: "0,0000011100"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323),	//сигма три
+		Answer: "0,0000100011"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8324, 32, 61, 32, 1052, 1085, 183, 98, 8322, 183, 50, 179),	//четвёртое частичное произведение
+		Answer: "0,0000111000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324),	//сигма четыре
+		Answer: "0,0001011011"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8325, 32, 61, 32, 1052, 1085, 183, 98, 8321, 183, 50, 8308),	//пятое частичное произведение
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8325, 32, 61, 32, 1052, 1085, 183, 1052, 1090),	//сигма пять
+		Answer: "0,0001011011"
+	}],
+//Алгоритм В
+	[{
+		text: String.fromCharCode(32, 931, 8320),	//сигма ноль
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8321, 32, 61, 32, 1052, 1085, 183, 98, 8321),		//первое частичное произведение
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321),	//сигма один
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321, 183, 50, 185),	//сдвинутое сигма один
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8322, 32, 61, 32, 1052, 1085, 183, 98, 8322),		//второе частичное произведение
+		Answer: "0,0000010111"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322),	//сигма два
+		Answer: "0,0000010111"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322, 183, 50, 185),	//сдвинутое сигма два
+		Answer: "0,0000101110"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8323, 32, 61, 32, 1052, 1085, 183, 98, 8323),		//третье частичное произведение
+		Answer: "0,0000010111"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323),	//сигма три
+		Answer: "0,0001000101"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323, 183, 50, 185),	//сдвинутое сигма три
+		Answer: "0,0010001010"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8324, 32, 61, 32, 1052, 1085, 183, 98, 8324),		//четвёртое частичное произведение
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324),	//сигма четыре
+		Answer: "0,0010001010"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324, 183, 50, 185),		//сдвинутое сигма четыре
+		Answer: "0,0100010100"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8325, 32, 61, 32, 1052, 1085, 183, 98, 8325),		//пятое частичное произведение
+		Answer: "0,0000010111"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8325, 32, 61, 32, 1052, 1085, 183, 1052, 1090),	//сигма пять
+		Answer: "0,0100101011"
+	}],
+//Алгоритм Г
+	[{
+		text: String.fromCharCode(32, 931, 8320),	//сигма ноль
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8321, 32, 61, 32, 1052, 1085, 183, 98, 8321, 183, 50, 8315, 185),		//первое частичное произведение
+		Answer: "0,0101100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321),		//сигма один
+		Answer: "0,0101100000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8322, 32, 61, 32, 1052, 1085, 183, 98, 8322, 183, 50, 8315, 178),	//второе частичное произведение
+		Answer: "0,0010110000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322),		//сигма два
+		Answer: "0,1000010000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8323, 32, 61, 32, 1052, 1085, 183, 98, 8323, 183, 50, 8315, 179),	//третье частичное произведение
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323),		//сигма три
+		Answer: "0,1000010000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8324, 32, 61, 32, 1052, 1085, 183, 98, 8324, 183, 50, 8315, 8308),	//четвёртое частичное произведение
+		Answer: "0,0000101100"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324),		//сигма четыре
+		Answer: "0,1000111100"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8325, 32, 61, 32, 1052, 1085, 183, 98, 8325, 183, 50, 8315, 8309),	//пятое частичное произведение
+		Answer: "0,0000010110"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8325, 32, 61, 32, 1052, 1085, 183, 1052, 1090),		//сигма пять
+		Answer: "0,1001010010"
+	}],
+];
+
+var yourAns = 0;
+var score = 0;
+
+function Score(){
+   var answerText = "Результаты:\n";
+   var counter = 0;
+   for(var i = 0; i < questions.length; i++) {
+	
+	if(i) {
+		alert(answerText);
+		answerText = "";
+	}
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"\n";
+	comment = comments[i];
+		for(var j = 0; j < comment.length; j++, counter++) {
+			num = j+1;
+			if(document.forms.quiz.elements[counter].value!=comment[j].Answer){
+				answerText=answerText+"Пункт №" + num +": Ответ не верный \n";
+				score=1;
+				 clearForm("quiz", counter);
+			}
+			else{
+			answerText=answerText+"Пункт №" + num +": Ответ верный \n";
+			}
+		}
+	}
+	if(score==1)
+	{
+   		answerText=answerText+"\nТест не пройден, вернитесь к изучению материала";
+	}
+	else
+	{
+		answerText=answerText+"\nТест успешно пройден";
+	}
+
+   alert(answerText);
+   yourAns =0;
+   score = 0;
+}
+function clearForm(name, i) {
+   var f = document.forms[name];
+	f.elements[i].value="";
+}
+</script>
+
+<style>
+span.quest {font-weight: bold;}
+</style>
+<FORM name="quiz">
+<ol>
+<script>	
+for(var q=0; q<questions.length; ++q) {
+   var question = questions[q];
+   var comment = comments[q];
+   var idx = 1 + q;
+
+   document.writeln('<p><span class="quest">' + question.text + '</span><br></br>');
+   for(var i=0; i<comment.length; i++) {
+   var symbol = comment[i];
+   num = i+1;
+	if(num < 10)
+	document.writeln(num +'. &nbsp; '+'<input type=textbox name="q' + idx + '"</input>' + symbol.text + '</br>');
+	else
+	document.writeln(num +'. '+'<input type=textbox name="q' + idx + '"</input>' + symbol.text + '</br>');
+	}
+}
+</script>
+</ol>
+<center><input type=button onClick="Score()" value="Проверить результаты"></center>
+
+</FORM>
+</body>
+</html>

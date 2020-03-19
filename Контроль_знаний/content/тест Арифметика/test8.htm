@@ -1,0 +1,620 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META HTTP-EQUIV="Content-Language" CONTENT="ru">
+<title>Тест №8</title>
+</head>
+
+<body>
+<center><h3>Тест №8</h3></center>
+<span style='font-size:12.0pt;margin-left: 65%'>
+<script type="text/javascript"> 
+
+var questions=[
+{
+	text: "Выполнить деление с восстановлением остатка<br>(деление выполнить с точностью 5 знаков после запятой): <br>Дм=0,01011 <br>Дт= 0,11011",
+},
+{
+	text: "Выполнить деление с восстановлением остатка<br>(деление выполнить с точностью 5 знаков после запятой): <br>Дм=0,01101  <br>Дт= 0,10011",
+},
+{
+	text: "Выполнить деление без восстановления остатка<br>(деление выполнить с точностью 5 знаков после запятой): <br>Дм=01101 <br>Дт= 10010",
+},
+{
+	text: "Выполнить деление без восстановления остатка<br>(деление выполнить с точностью 5 знаков после запятой): <br>Дм=01001 <br>Дт= 11001",
+},
+{
+	text: "Выполнить деление в дополнительном коде<br>(деление выполнить с точностью 5 знаков после запятой): <br>Дм= - 0,10101  <br>Дт= 0,11101",
+},
+{
+	text: "Выполнить деление в дополнительном коде<br>(деление выполнить с точностью 5 знаков после запятой): <br>Дм= 0,11001 <br>Дт= - 0,11011",
+}
+];
+
+var comments=[	
+// Задание 1
+	[{
+		text: " A&#8320",
+		Answer: "0,01011"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8321 < 0",
+		Answer: "1,10000"
+	},
+	{
+		text: " +Дт",
+		Answer: "0,11011"
+	},
+	{
+		text: " A&#8320",
+		Answer: "0,01011"
+	},
+	{
+		text: " A&#8320"+String.fromCharCode(183, 50, 185),
+		Answer: "0,10110"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8322 < 0",
+		Answer: "1,11011"
+	},
+	{
+		text: " +Дт",
+		Answer: "0,11011"
+	},
+	{
+		text: " A&#8320"+String.fromCharCode(183, 50, 185),
+		Answer: "0,10110"
+	},
+	{
+		text: " A&#8320"+String.fromCharCode(183, 50, 178),
+		Answer: "1,01100"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8323 > 0",
+		Answer: "0,10001"
+	},
+	{
+		text: " A&#8323"+String.fromCharCode(183, 50, 185),
+		Answer: "1,00010"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8324 > 0",
+		Answer: "0,00111"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 185),
+		Answer: "0,01110"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8325 < 0",
+		Answer: "1,10011"
+	},
+	{
+		text: " +Дт",
+		Answer: "0,11011"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 185),
+		Answer: "0,01110"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 178),
+		Answer: "0,11100"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8326 > 0<br>По результату выполненого деления сформировать частное<br>записать в естественной форме записи:",
+		Answer: "0,00001"
+	},
+	{
+		text: " Чт",
+		Answer: "0,01101"
+	}],
+	// Задание 2
+	[{
+		text: " A&#8320",
+		Answer: "0,01101"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,01101"
+	},
+	{
+		text: " A&#8321 < 0",
+		Answer: "1,11010"
+	},
+	{
+		text: " +Дт",
+		Answer: "0,10011"
+	},
+	{
+		text: " A&#8320",
+		Answer: "0,01101"
+	},
+	{
+		text: " A&#8320"+String.fromCharCode(183, 50, 185),
+		Answer: "0,11010"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,01101"
+	},
+	{
+		text: " A&#8322 > 0",
+		Answer: "0,00111"
+	},
+	{
+		text: " A&#8320"+String.fromCharCode(183, 50, 185),
+		Answer: "0,01110"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,01101"
+	},
+	{
+		text: " A&#8323 < 0",
+		Answer: "1,11011"
+	},
+	{
+		text: " +Дт",
+		Answer: "0,10011"
+	},
+	{
+		text: " A&#8322"+String.fromCharCode(183, 50, 185),
+		Answer: "0,01110"
+	},
+	{
+		text: " A&#8322"+String.fromCharCode(183, 50, 178),
+		Answer: "0,11100"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,01101"
+	},
+	{
+		text: " A&#8324 > 0",
+		Answer: "0,01001"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 185),
+		Answer: "0,10010"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,01101"
+	},
+	{
+		text: " A&#8325 < 0",
+		Answer: "1,11111"
+	},
+	{
+		text: " +Дт",
+		Answer: "0,10011"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 185),
+		Answer: "0,10010"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 178),
+		Answer: "1,00100"
+	},
+	{
+		text: " [-Дт]<sub>доп</sub>",
+		Answer: "1,01101"
+	},
+	{
+		text: " A&#8326 > 0<br>По результату выполненого деления сформировать частное<br>записать в естественной форме записи:",
+		Answer: "0,10001"
+	},
+	{
+		text: " Чт",
+		Answer: "0,10101"
+	}],
+//Задание 3
+	[{
+		text: " A&#8320",
+		Answer: "0.01101"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1.01110"
+	},
+	{
+		text: " A&#8321 < 0",
+		Answer: "1.11011"
+	},
+	{
+		text: " A&#8321"+String.fromCharCode(183, 50, 185),
+		Answer: "1.10110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0.10010"
+	},
+	{
+		text: " A&#8322 > 0",
+		Answer: "0.01000"
+	},
+	{
+		text: " A&#8322"+String.fromCharCode(183, 50, 185),
+		Answer: "0.10000"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1.01110"
+	},
+	{
+		text: " A&#8323 < 0",
+		Answer: "1.11110"
+	},
+	{
+		text: " A&#8323"+String.fromCharCode(183, 50, 185),
+		Answer: "1.11100"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0.10010"
+	},
+	{
+		text: " A&#8324 > 0",
+		Answer: "0.01110"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 185),
+		Answer: "0.11100"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1.01110"
+	},
+	{
+		text: " A&#8325 > 0",
+		Answer: "0.01010"
+	},
+	{
+		text: " A&#8325"+String.fromCharCode(183, 50, 185),
+		Answer: "0.10100"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1.01110"
+	},
+	{
+		text: " A&#8326 > 0<br>По результату выполненого деления сформировать частное<br>записать в естественной форме записи:",
+		Answer: "0.00010"
+	},
+	{
+		text: " Чт",
+		Answer: "0,10111"
+	}],
+//Задание 4
+	[{
+		text: " A&#8320",
+		Answer: "0.01001"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1.00111"
+	},
+	{
+		text: " A&#8321 < 0",
+		Answer: "1.01111"
+	},
+	{
+		text: " A&#8321"+String.fromCharCode(183, 50, 185),
+		Answer: "0.11110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0.11001"
+	},
+	{
+		text: " A&#8322 < 0",
+		Answer: "1.10111"
+	},
+	{
+		text: " A&#8322"+String.fromCharCode(183, 50, 185),
+		Answer: "1.01110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0.11001"
+	},
+	{
+		text: " A&#8323 > 0",
+		Answer: "0.00111"
+	},
+	{
+		text: " A&#8322"+String.fromCharCode(183, 50, 185),
+		Answer: "0.01110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1.00111"
+	},
+	{
+		text: " A&#8324 < 0",
+		Answer: "1.10101"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 185),
+		Answer: "1.01010"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0.11001"
+	},
+	{
+		text: " A&#8325 > 0",
+		Answer: "0.00011"
+	},
+	{
+		text: " A&#8325"+String.fromCharCode(183, 50, 185),
+		Answer: "0.00110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1.00111"
+	},
+	{
+		text: " A&#8326 < 0<br>По результату выполненого деления сформировать частное<br>записать в естественной форме записи:",
+		Answer: "1.01101"
+	},
+	{
+		text: " Чт",
+		Answer: "0,01010"
+	}],
+//Задание 5
+	[{
+		text: " A&#8320",
+		Answer: "1,01011"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0,11101"
+	},
+	{
+		text: " A&#8321 > 0",
+		Answer: "0,01000"
+	},
+	{
+		text: " A&#8321"+String.fromCharCode(183, 50, 185),
+		Answer: "0,10000"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1,00011"
+	},
+	{
+		text: " A&#8322 < 0",
+		Answer: "1,10011"
+	},
+	{
+		text: " A&#8322"+String.fromCharCode(183, 50, 185),
+		Answer: "1,00110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0,11101"
+	},
+	{
+		text: " A&#8323 > 0",
+		Answer: "0,00011"
+	},
+	{
+		text: " A&#8323"+String.fromCharCode(183, 50, 185),
+		Answer: "0,00110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1,00011"
+	},
+	{
+		text: " A&#8324 < 0",
+		Answer: "1,00011"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 185),
+		Answer: "0,10010"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0,11101"
+	},
+	{
+		text: " A&#8325 < 0",
+		Answer: "1,01111"
+	},
+	{
+		text: " A&#8325"+String.fromCharCode(183, 50, 185),
+		Answer: "0,11110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0,11101"
+	},
+	{
+		text: " A&#8326 < 0<br><br>По результату выполненого деления сформировать частное<br>записать в естественной форме записи:",
+		Answer: "1,11011"
+	},
+	{
+		text: " Чт",
+		Answer: "-0,01000"
+	}],
+//Задание 6
+	[{
+		text: " A&#8320",
+		Answer: "0,11001"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8321 < 0",
+		Answer: "1,11110"
+	},
+	{
+		text: " A&#8321"+String.fromCharCode(183, 50, 185),
+		Answer: "1,11100"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0,11011"
+	},
+	{
+		text: " A&#8322 > 0",
+		Answer: "0,10111"
+	},
+	{
+		text: " A&#8322"+String.fromCharCode(183, 50,185),
+		Answer: "1,01110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8323 > 0",
+		Answer: "0,10011"
+	},
+	{
+		text: " A&#8323"+String.fromCharCode(183, 50, 185),
+		Answer: "1,00110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8324 > 0",
+		Answer: "0,01011"
+	},
+	{
+		text: " A&#8324"+String.fromCharCode(183, 50, 185),
+		Answer: "0,10110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "1,00101"
+	},
+	{
+		text: " A&#8325 < 0",
+		Answer: "1,11011"
+	},
+	{
+		text: " A&#8325"+String.fromCharCode(183, 50, 185),
+		Answer: "1,10110"
+	},
+	{
+		text: " [&#177Дт]<sub>доп</sub>",
+		Answer: "0,11011"
+	},
+	{
+		text: " A&#8326 > 0<br>По результату выполненого деления сформировать частное<br>записать в естественной форме записи:",
+		Answer: "0,10001"
+	},
+	{
+		text: " Чт",
+		Answer: "-0,11101"
+	}]
+];
+
+var yourAns = 0;
+var score = 0;
+
+function Score(){
+   var answerText = "Результаты:\n";
+   var counter = 0;
+   for(var i = 0; i < questions.length; i++) {
+	
+	if(i) {
+		alert(answerText);
+		answerText = "";
+	}
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"\n";
+	comment = comments[i]
+		for(var j = 0; j < comment.length; j++, counter++) {
+			num = j+1
+			if(document.forms.quiz.elements[counter].value!=comment[j].Answer){
+				answerText=answerText+"Пункт №" + num +": Ответ не верный \n";
+				score=1;
+				 clearForm("quiz", counter);
+			}
+			else{
+			answerText=answerText+"Пункт №" + num +": Ответ верный \n";
+			}
+		}
+	}
+	if(score==1)
+	{
+   		answerText=answerText+"\nТест не пройден, вернитесь к изучению материала";
+	}
+	else
+	{
+		answerText=answerText+"\nТест успешно пройден";
+	}
+
+   alert(answerText);
+   yourAns =0;
+   score = 0;
+}
+function clearForm(name, i) {
+   var f = document.forms[name];
+	f.elements[i].value="";
+}
+</script>
+
+<style>
+span.quest {font-weight: bold;}
+</style>
+<FORM name="quiz">
+<ol>
+<script>	
+for(var q=0; q<questions.length; ++q) {
+   var question = questions[q];
+   var comment = comments[q]
+   var idx = 1 + q;
+
+   document.writeln('<p><span class="quest">' + question.text + '</span><br></br>');
+   for(var i=0; i<comment.length; i++) {
+   var symbol = comment[i]
+   num = i+1
+	if(num < 10)
+	document.writeln(num +'. &nbsp; '+'<input type=textbox name="q' + idx + '"</input>' + symbol.text + '</br>');
+	else
+	document.writeln(num +'. '+'<input type=textbox name="q' + idx + '"</input>' + symbol.text + '</br>');
+	}
+}
+</script>
+</ol>
+<center><input type=button onClick="Score()" value="Проверить результаты"></center>
+
+</FORM>
+</body>
+</html>

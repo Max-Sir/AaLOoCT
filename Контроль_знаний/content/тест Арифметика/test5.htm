@@ -1,0 +1,340 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META HTTP-EQUIV="Content-Language" CONTENT="ru">
+<LINK rel=stylesheet href="../../css/style.css" type=text/css>
+<title>Тест №5</title>
+</head>
+
+<body>
+<center><h3>Тест №5</h3></center>
+<span style='font-size:12.0pt;margin-left: 65%'>
+<script type="text/javascript">
+
+var questions=[
+{
+	text: "Над числами:<br>Мн=0111<br>Мт=110010<br>выполнить умножение по два разряда (алгоритм А).<br>Сумма &#931&#7522 состоит из пятиразрядного сумматора и восьмиразрядного регистра множителя,<br> где разряды множителя заменены нулями.",
+},
+{
+	text: "Над числами: <br>Мн = 0010<br>Мт = 111011<br>выполнить умножение по два разряда (алгоритм Б).<br>В задании используется тринадцатиразрядный сумматор.",
+},
+{
+	text: "Над числами: <br>Мн = 0,10111<br>Мт = 0,01101<br>выполнить умножение по два разряда.<br>Сумма &#931&#7522 состоит из шестиразрядного сумматора и пятиразрядного регистра множителя,<br> где разряды множителя заменены нулями.",
+}
+];
+
+var comments=[	
+//Алгоритм А
+	[{
+		text: "Преобразованный множитель<br>",
+		value: 
+		[
+			"01020120",
+			"01020010",
+			"020120",
+			"202001",
+			"110010"
+		],
+		Answer: 1
+	},
+	{
+		text: String.fromCharCode(32, 931, 8320),	//сигма ноль
+		Answer: "0.000000000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8321, 32, 61, 32, 1052, 1085, 183, 40, 98, 8327, 98, 8328, 41),	//первое частичное произведение
+		Answer: "0.111000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321),	//сигма один
+		Answer: "0.111000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321, 183, 50, 8315, 178),	//сдвинутое сигма один
+		Answer: "0.001110000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8322, 32, 61, 32, 1052, 1085, 183, 40, 98, 8325, 98, 8326, 41),	//второе частичное произведение
+		Answer: "0.000000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322),	//сигма два
+		Answer: "0.001110000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322, 183, 50, 8315, 178),	//сдвинутое сигма два
+		Answer: "0.000011100000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8323, 32, 61, 32, 1052, 1085, 183, 40, 98, 8323, 98, 8324, 41),	//третье частичное произведение
+		Answer: "1.100100000000"	
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323),	//сигма три
+		Answer: "1.100111100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323, 183, 50, 8315, 178),	//сдвинутое сигма три
+		Answer: "1.111001111000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8324, 32, 61, 32, 1052, 1085, 183, 40, 98, 8321, 98, 8322, 41),	//четвёртое частичное произведение
+		Answer: "0.011100000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324),	//сигма четыре
+		Answer: "0.010101111000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324, 183, 50, 8315, 178),	//сдвинутое сигма четыре
+		Answer: "0.000101011110"
+	}],
+//Алгоритм Б по два разряда
+	[{
+		text: "Преобразованный множитель<br>",
+		value: 
+		[
+			"000202",
+			"022002",
+			"02022002",
+			"01022002",
+			"01000202"
+		],
+		Answer: 4
+	},
+	{
+		text: String.fromCharCode(32, 931, 8320),	//сигма ноль
+		Answer: "0.000000000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8321, 32, 61, 32, 1052, 1085, 183, 40, 98, 8327, 98, 8328, 41, 183, 50, 8304),	//первое частичное произведение
+		Answer: "1.111111111110"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321),	//сигма один
+		Answer: "1.111111111110"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8322, 32, 61, 32, 1052, 1085, 183, 40, 98, 8325, 98, 8326, 41, 183, 50, 178),	//второе частичное произведение
+		Answer: "1.111111111000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322),	//сигма два
+		Answer: "1.111111110110"
+		
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8323, 32, 61, 32, 1052, 1085, 183, 40, 98, 8323, 98, 8324, 41, 183, 50, 8308),	//третье частичное произведение
+		Answer: "0.000000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323),	//сигма три
+		Answer: "1.111111110110"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8324, 32, 61, 32, 1052, 1085, 183, 40, 98, 8321, 98, 8322, 41, 183, 50, 8310),	//четвёртое частичное произведение
+		Answer: "0.000010000000"
+	},
+	{
+		text: " &#931&#8324 = [Мн&#183Мт]<sub>доп</sub>",	//сигма четыре
+		Answer: "0.000001110110"
+	}],
+//Алгоритм А с сохранением переноса
+	[{
+		text: String.fromCharCode(32, 931, 8320),	//сигма ноль
+		Answer: "0,0000000000"
+	},
+	{
+		text: " пер",	//регистр переноса
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8321, 32, 61, 32, 1052, 1085, 183, 98, 8325),	//первое частичное произведение
+		Answer: "0,1011100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321),	//сигма один
+		Answer: "0,1011100000"
+	},
+	{
+		text: " пер",	//регистр переноса
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8321, 183, 50, 8315, 185),	//сдвинутое сигма один
+		Answer: "0,0101110000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8322, 32, 61, 32, 1052, 1085, 183, 98, 8324),	//второе частичное произведение
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322),	//сигма два
+		Answer: "0,0101110000"
+	},
+	{
+		text: " пер",	//регистр переноса
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8322, 183, 50, 8315, 185),	//сдвинутое сигма два
+		Answer: "0,0010111000"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8323, 32, 61, 32, 1052, 1085, 183, 98, 8323),	//третье частичное произведение
+		Answer: "0,1011100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323),	//сигма три
+		Answer: "0,1001011000"
+	},
+	{
+		text: " пер",	//регистр переноса
+		Answer: "0,0010100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8323, 183, 50, 8315, 185),	//сдвинутое сигма три
+		Answer: "0,0100101100"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8324, 32, 61, 32, 1052, 1085, 183, 98, 8322),	//четвёртое частичное произведение
+		Answer: "0,1011100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324),	//сигма четыре
+		Answer: "0,1101101100"
+	},
+	{
+		text: " пер",	//регистр переноса
+		Answer: "0,0010100000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8324, 183, 50, 8315, 185),	//сдвинутое сигма четыре
+		Answer: "0,0110110110"
+	},
+	{
+		text: String.fromCharCode(32, 1055, 8325, 32, 61, 32, 1052, 1085, 183, 98, 8321),	//пятое частичное произведение
+		Answer: "0,0000000000"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8325),	//сигма пять
+		Answer: "0,1001010110"
+	},
+	{
+		text: String.fromCharCode(32, 931, 8325, 183, 50, 8315, 185, 32, 61, 32, 1052, 1085, 183, 1052, 1090),	//сдвинутое сигма пять
+		Answer: "0,0100101011"
+	}],
+];
+
+var yourAns = 0;
+var score = 0;
+
+function Score(){
+   var answerText = "Результаты:\n";
+   var counter = 0;
+   for(var i = 0; i < questions.length; i++) {
+	
+	if(i) {
+		alert(answerText);
+		answerText = "";
+	}
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"\n";
+	comment = comments[i];
+		for(var j = 0; j < comment.length; j++, counter++) {
+			num = j+1;
+			if(comment[j].text == "Преобразованный множитель<br>") {
+				if(!document.forms.quiz.elements[counter + comment[j].Answer].checked) {
+					answerText=answerText+"Пункт №" + num +": Ответ не верный \n";
+					score=1;
+				}
+				else {
+					answerText=answerText+"Пункт №" + num +": Ответ верный \n";
+				}
+				counter += comment[j].value.length - 1;
+			}
+			else {
+				if(document.forms.quiz.elements[counter].value!=comment[j].Answer){
+					answerText=answerText+"Пункт №" + num +": Ответ не верный \n";
+					score=1;
+					clearForm("quiz", counter);
+				}
+				else{
+				answerText=answerText+"Пункт №" + num +": Ответ верный \n";
+				}
+			}
+		}
+	}
+	if(score==1)
+	{
+   		answerText=answerText+"\nТест не пройден, вернитесь к изучению материала";
+	}
+	else
+	{
+		answerText=answerText+"\nТест успешно пройден";
+	}
+
+   alert(answerText);
+   yourAns =0;
+   score = 0;
+}
+function clearForm(name, i, gap) {
+   var f = document.forms[name];
+	f.elements[i].value="";
+}
+</script>
+
+<style>
+span.quest {font-weight: bold;}
+</style>
+<FORM name="quiz">
+<ol>
+<script>	
+for(var q=0; q<questions.length; ++q) {
+   var question = questions[q];
+   var comment = comments[q];
+   var idx = 1 + q;
+
+   document.writeln('<p><span class="quest">' + question.text + '</span><br></br>');
+   for(var i=0; i<comment.length; i++) {
+   var symbol = comment[i];
+   num = i+1;
+   
+	if(num < 10)
+	{
+		if(symbol.text == "Преобразованный множитель<br>")
+			{
+				document.writeln(num +'. &nbsp' + symbol.text);
+				for(var j=0; j<symbol.value.length; j++) {
+					document.writeln('<input type=radio name="q' + idx + '"></input>');
+					for(var j1=0; j1<symbol.value[j].length; j1++) 
+						if(symbol.value[j][j1] == "2")
+						document.writeln('<span class = "overline">1</span>');
+						else
+						document.writeln(symbol.value[j][j1]);
+				document.writeln('<br>');
+				}
+			}
+		else
+			document.writeln(num +'. &nbsp; '+'<input type=textbox name="q' + idx + '"></input>' + symbol.text + '</br>');
+	}
+	else
+	{
+		if(symbol.text == "Преобразованный множитель<br>")
+			{
+				document.writeln(num +'. ' + symbol.text);
+				for(var j=0; j<symbol.value.length; j++)
+					document.writeln('<input type=radio name="q' + idx + '"></input>' + symbol.value[j] + '</br>');
+			}
+		else
+			document.writeln(num +'. '+'<input type=textbox name="q' + idx + '"></input>' + symbol.text + '</br>');
+	}
+	}
+}
+</script>
+</ol>
+<center><input type=button onClick="Score()" value="Проверить результаты"></center>
+
+</FORM>
+</body>
+</html>

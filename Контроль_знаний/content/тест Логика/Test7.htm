@@ -1,0 +1,87 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META HTTP-EQUIV="Content-Language" CONTENT="ru">
+<title>Тест №7</title>
+</head>
+
+<body>
+<center><h3>Тест №7</h3></center>
+<span style='font-size:12.0pt;margin-left: 65%'>
+<SCRIPT LANGUAGE="JavaScript">
+
+var questions=[
+{
+	text: "Выберите из предложенных наборов операций тот, который представляет собой функционально полный набор:",
+	answers: ["{И,ИЛИ}",
+		"{И,(+)}",
+		"{И,(+),1}",
+		"{1,НЕ}"],
+	correctAnswer: 2 // нумерация ответов с нуля
+}
+];
+
+var yourAns = new Array;
+var score = 0;
+
+function Engine(question, answer) {yourAns[question]=answer;}
+
+function Score(){
+   var answerText = "Результаты:\n";
+   for(var i = 0; i < yourAns.length; ++i){
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"";
+	if(yourAns[i]!=questions[i].correctAnswer){
+	    answerText=answerText+": Ответ не верный \n";
+	    score=1;
+	  }
+        else{
+	    answerText=answerText+": Ответ верный \n";
+	    }
+       }
+	if(score==1)
+	{
+   		answerText=answerText+"\nТест не пройден, вернитесь к изучению материала\n";
+	}
+	else
+	{
+		answerText=answerText+"\nТест успешно пройден\n";
+	}
+
+
+   alert(answerText);
+   yourAns = new Array;
+   score = 0;
+   clearForm("quiz");
+}
+function clearForm(name) {
+   var f = document.forms[name];
+   for(var i = 0; i < f.elements.length; ++i) {
+	if(f.elements[i].checked)
+		f.elements[i].checked = false;
+}
+}
+</script>
+
+<style>
+span.quest {font-weight: bold;}
+</style>
+
+<FORM name="quiz">
+<ol>
+<script>	
+for(var q=0; q<questions.length; ++q) {
+   var question = questions[q];
+   var idx = 1 + q;
+
+   document.writeln('<li><span class="quest">' + question.text + '</span><br/>');
+   for(var i in question.answers) {
+	document.writeln('<input type=radio name="q' + idx + '" value="' + i +
+	'" onClick="Engine(' + q + ', this.value)">' + question.answers[i] + '<br/>');
+}
+}
+</script>
+</ol>
+<center><input type=button onClick="Score()" value="Проверить результаты"></center>
+
+</FORM>

@@ -1,0 +1,93 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META HTTP-EQUIV="Content-Language" CONTENT="ru">
+<title>Тест №4</title>
+</head>
+
+<body>
+<center><h3>Тест №4</h3></center>
+<span style='font-size:12.0pt;margin-left: 65%'>
+<script type="text/javascript">
+
+var questions=[
+{
+	text: "Над числами: <br>Мн=0,10011<br>Мт=0,11101<br>выполнить умножение  Мн*Мт  (алгоритм А)",
+	Answer: "0,1000100111"
+},
+{
+	text: "Над числами: <br>Мн=0,00111<br>Мт=0,01101<br>выполнить умножение  Мн*Мт  (алгоритм А)",
+	Answer: "0,0001011011"
+},
+{
+	text: "Над числами: <br>Мн=0,10111<br>Мт=0,01101<br>выполнить умножение  Мн*Мт  (алгоритм А)",
+	Answer: "0,0100101011"
+},
+{
+	text: "Над числами: <br>Мн=0,10110<br>Мт=0,11011<br>выполнить умножение  Мн*Мт  (алгоритм А)",
+	Answer: "0,1001010010"
+}
+];
+
+var yourAns = 0;
+var score = 0;
+
+function Score(){
+   var answerText = "Результаты:\n";
+   for(var i = 0; i <questions.length; ++i)
+      {
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"";
+	if(document.forms.quiz.elements[i].value!=questions[i].Answer){
+	    answerText=answerText+": Ответ не верный \n";
+	score=1;
+	  }
+      	  else{
+	    answerText=answerText+": Ответ верный \n";
+	    }
+       }
+	if(score==1)
+	{
+   		answerText=answerText+"\nТест не пройден, вернитесь к изучению материала\n";
+	}
+	else
+	{
+		answerText=answerText+"\nТест успешно пройден\n";
+	}
+
+   alert(answerText);
+   yourAns =0;
+   score = 0;
+   clearForm("quiz");
+}
+function clearForm(name) {
+   var f = document.forms[name];
+   for(var i = 0; i < f.elements.length-1; ++i) {
+	f.elements[i].value="";
+}
+}
+</script>
+
+<style>
+span.quest {font-weight: bold;}
+</style>
+
+<FORM name="quiz">
+<ol>
+<script>	
+for(var q=0; q<questions.length; ++q) {
+   var question = questions[q];
+   var idx = 1 + q;
+
+   document.writeln('<li><span class="quest">' + question.text + '</span><br/>');
+   for(var i=0; i<1; i++) {
+	document.writeln('<input type=textbox name="q' + idx +'"<br>');
+}
+}
+</script>
+</ol>
+<center><input type=button onClick="Score()" value="Проверить результаты"></center>
+
+</FORM>
+</body>
+</html>

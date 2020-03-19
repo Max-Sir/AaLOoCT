@@ -1,0 +1,1176 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<base target="_top">
+<title>Лекция №17</title>
+<link rel=Stylesheet type="text/css" media=all href="file:///C:\..\css\style.css">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{mso-style-link:"Основной текст Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:14.0pt;
+	font-family:"Times New Roman","serif";}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-link:"Текст выноски Знак";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";}
+span.a
+	{mso-style-name:"Основной текст Знак";
+	mso-style-link:"Основной текст";}
+span.a0
+	{mso-style-name:"Текст выноски Знак";
+	mso-style-link:"Текст выноски";
+	font-family:"Tahoma","sans-serif";}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+<meta http-equiv=Content-Language content=ru>
+</head>
+
+<body lang=RU>
+
+<div class=WordSection1>
+
+<p align=center style='text-align:center'><strong>Тема № 17 &quot; Стандартные
+функциональные узлы цифровой техники &quot; </strong></p>
+
+<p><b>Вопросы:</b></p>
+
+<p>-Стандартные функциональные узлы цифровой техники<br>
+-Дешифраторы (шифраторы)<br>
+-Мультиплексоры (демультиплексоры)</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Стандартные
+функциональные узлы цифровой техники</b><br>
+При проектировании устройств вычислительной техники достаточно часто используют
+стандартные функциональные узлы. К числу их относятся такие как: дешифраторы
+(шифраторы) и мультиплексоры (демультиплексоры). Это упрощает процесс и
+сокращает время необходимое на проектирования и изготовления устройств.<br>
+<b>Дешифраторы (шифраторы). Дешифратор</b> - комбинационная логическая схема,
+преобразующая поступающий на ее входы двоичный позиционный код в активный
+сигнал только на одном из выходов (унитарный код). Обычно указанный в схеме
+номер вывода дешифратора соответствует десятичному эквиваленту двоичного кода,
+подаваемого на вход дешифратора в качестве входных переменных. Иначе говоря,
+при подаче на вход устройства двоичного кода на выходе дешифратора появится
+сигнал на том выходе, номер которого соответствует десятичному эквиваленту
+двоичного кода. Отсюда следует, что в любой момент времени выходной сигнал
+будет иметь место только на одном выходе дешифратора. В зависимости от типа
+дешифратора, этот сигнал может иметь как уровень логической единицы (при этом
+на всех остальных выходах уровень логического 0), так и уровень логического 0
+(при этом на всех остальных выходах уровень логической 1).</p>
+
+<p class=MsoNormal style='text-align:justify'>В дешифраторах каждой выходной
+функции соответствует только один минтерм, а количество функций определяется
+количеством разрядов двоичного числа. Если дешифратор реализует все минтермы
+входных переменных, то он называется полным дешифратором (в качестве примера
+неполного дешифратора можно привести дешифратор двоично-десятичных чисел). </p>
+
+<p class=MsoNormal style='text-align:justify'>Рассмотрим пример синтеза
+дешифратора (полного), количество разрядов двоичного числа – 3, количество
+выходов – 8. Таблица истинности, соответствующая устройству представлена<span
+lang=EN-US>. </span>Чаще всего дешифраторы применяются для преобразования
+n-разрядного двоичного в унитарный код на 2<sup>n</sup> выходов. Каждому
+n-разрядному двоичному коду на входе соответствует сигнал только на одном из 2<sup>n</sup>
+функций. При этом дешифратор реализует 2<sup>n</sup> функций. Принцип
+функционирования дешифратора может быть продемонстрирован следующей таблицей
+истинности:</p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:47.95pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><i>х</i><i><sub><span
+  lang=EN-US>1</span></sub>х</i><i><sub><span lang=EN-US>2</span></sub>х</i><i><sub><span
+  lang=EN-US>3</span></sub></i></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.5pt;border-left:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>y<sub>1</sub>y<sub>2</sub>y<sub>3</sub>y<sub>4</sub>y<sub>5</sub>y<sub>6</sub>y<sub>7</sub>y<sub>8</sub></span></i></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 0</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;<span lang=EN-US>1</span>
+  0 0 0 0 0 0 <span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 <span lang=EN-US>1</span></p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span>0
+  <span lang=EN-US>1</span> 0 0 0 0 <span lang=EN-US>0</span> 0</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 1 0</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 <span lang=EN-US>1</span>
+  0 0 <span lang=EN-US>0</span> 0 0</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 1 1</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 0 <span lang=EN-US>1
+  0</span> 0 0 0</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 0 0</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 0 <span lang=EN-US>0
+  1</span> 0 0 0</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 0 1</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 <span lang=EN-US>0</span>
+  0 0 <span lang=EN-US>1</span> 0 0</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 1 0</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 <span lang=EN-US>0</span>
+  0 0 0 0 <span lang=EN-US>1</span> 0</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.5pt;border-top:none;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 1 1</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.5pt;
+  border-right:solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;<span lang=EN-US>0 </span>0
+  0 0 0 0 0 <span lang=EN-US>1</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'>Сказанное выше касается полного
+дешифратора, на практике же встречаются неполные дешифраторы реализующие лишь
+некоторые из выходных функций. Способы построения дешифратора зависят от
+используемой системы элементов, разрядности входного кода, числа входов
+логических схем используемых для построения дешифратора. В интегральном
+исполнении широкое распространение получили линейные (матричные) дешифраторы. В
+них каждая функция F<sub>(Xn ...X1)</sub> реализуется на отдельном конъюнкторе,
+имеющем n-входов и один выход. Синтезированная схема линейного дешифратора,
+построенного на логических элементах И, ИЛИ, НЕ, и имеющего n=3 парафазных
+входа и 8 выходов, показана на рис. 17.1а, а его условное графическое
+обозначение (УГО) – на рис. 17.1б.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=EN-US>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td width=138 style='width:82.8pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td style='padding:0cm 0cm 0cm 0cm'></td>
+  <td style='padding:0cm 0cm 0cm 0cm'></td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='display:none'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td width=160 style='width:96.0pt;padding:0cm 0cm 0cm 0cm'></td>
+ </tr>
+ <tr>
+  <td style='padding:0cm 0cm 0cm 0cm'></td>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><img width=757 height=428
+  src="file:///C:\1\lk17.files\image001.gif"
+  alt="Описание: Описание: C:\1\lk17.files\image001.gif"></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><br clear=all>
+<br>
+Кроме линейных дешифраторов существуют каскадные (прямоугольные и
+пирамидальные) дешифраторы, но они не получили распространения в интегральных
+схемах по причине увеличения времени задержки распространения сигнала от входа
+до выхода. Эти параметры в сравнении с матричной схемой увеличиваются в m раз
+(где m - число каскадов схемы дешифратора).<br>
+Часто дешифраторы дополняются входом разрешения работы. Если на этот вход
+поступает единица, то дешифратор функционирует, в ином случае на выходе
+дешифратора вырабатывается логический ноль вне зависимости от входных сигналов.<br>
+Существуют дешифраторы с инверсными выходами, у такого дешифратора выбранный
+разряд показан нулём. Обратное преобразование осуществляет шифратор.</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>Шифратор – это комбинационное
+цифровое устройство, преобразующее позиционный <i>n</i>-разрядный код в <i><span
+lang=EN-US>k</span></i>-разрядный <i><span lang=EN-US>r</span></i>-ричный код
+(двоичный, троичный,…). В общем случае единичный сигнал на одном из входов
+преобразуется в <i><span lang=EN-US>k</span></i>-разрядный двоичный код. Один
+из вариантов его применения – в устройствах ввода информации (пультах
+управления) для преобразования десятичных чисел в двоичную систему счисления. </p>
+
+<p class=MsoNormal style='text-align:justify'>Предположим, на пульте десять
+клавиш от 0 до 9. При нажатии любой из них на вход шифратора подается единичный
+сигнал (<i>х</i><sub>0</sub><i>, ..., х</i><sub>9</sub>). На выходе шифратора
+должен появиться двоичный код этого десятичного числа. Как видно из таблицы
+истинности (табл. 27), в этом случае нужен преобразователь с десятью входами и
+четырьмя выходами.</p>
+
+<p class=MsoBodyText><span lang=X-NONE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:47.95pt;border-collapse:collapse'>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i>№</i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>0
+  </sub></i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>1</sub></i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>2</sub></i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>3</sub></i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>4</sub></i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>5</sub></i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>6</sub></i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>7</sub></i></p>
+  </td>
+  <td valign=top style='border-top:solid windowtext 1.0pt;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:none;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>8</sub></i></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>x</span><sub>9</sub></i></p>
+  </td>
+  <td valign=top style='border:solid windowtext 1.0pt;border-left:none;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'><i>&nbsp;</i><i><span
+  lang=EN-US>y<sub>1&nbsp; </sub>y<sub>2&nbsp; </sub>y<sub>3&nbsp; </sub>y<sub>4</sub></span></i></p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>0</span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0&nbsp; 0&nbsp; 0&nbsp; 0
+  </p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>1</span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0&nbsp; 0&nbsp; 0&nbsp; 1
+  </p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>2</span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0&nbsp; 0&nbsp; 1&nbsp; 0
+  </p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>3</span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0&nbsp; 0&nbsp; 1&nbsp; 1
+  </p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>4 </span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0&nbsp; 1&nbsp; 0&nbsp; 0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+  </td>
+  <td width=11 valign=top style='width:6.7pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>5</span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0&nbsp; 1&nbsp; 0&nbsp; 1
+  </p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>6</span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0&nbsp; 1&nbsp; 1&nbsp; 0
+  </p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>7</span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0&nbsp; 1&nbsp; 1&nbsp; 1</p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border-top:none;border-left:solid windowtext 1.0pt;
+  border-bottom:none;border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>8</span></p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-right:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1&nbsp; 0&nbsp; 0&nbsp; 0</p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='border:solid windowtext 1.0pt;border-top:none;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal align=center style='text-align:center'><span lang=EN-US>9</span></p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>0</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>1</p>
+  </td>
+  <td valign=top style='border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;
+  border-right:solid windowtext 1.0pt;padding:0cm 2.85pt 0cm 2.85pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1&nbsp; 0&nbsp; 0&nbsp; 1
+  </p>
+  </td>
+  <td width=81 colspan=8 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify'><br>
+Функциональная схема и условно графическое изображение шифратора приведены на
+рис. 17.2а и 17.2б.</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td width=181 style='width:108.6pt;padding:0cm 0cm 0cm 0cm'></td>
+ </tr>
+ <tr>
+  <td style='padding:0cm 0cm 0cm 0cm'></td>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><img width=709 height=391
+  src="file:///C:\1\lk17.files\image002.gif"
+  alt="Описание: Описание: C:\1\lk17.files\image002.gif"></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><br clear=all>
+<b>Мультиплексоры (демультиплексоры). Мультиплексор</b> - комбинационное
+цифровое устройство с <i>m</i> информационными, <i>n</i> управляющими входами и
+одним выходом. Функционально мультиплексор состоит из <i>m</i> элементов
+конъюнкции, выходы которых объединены с помощью элемента ИЛИ с <i>m</i>
+входами. На один вход каждого из элементов конъюнкции подается один из
+информационных сигналов, а на другие входы&nbsp; элементов конъюнкции подаются
+сигналы соответствующие номеру логического элемента И, сигнал с которого должен
+быть пропущен на выход мультиплексора. Таблица истинности, описывающая работу
+мультиплексора «1 из 4», имеющего 4 информационных (<i>x<sub>1</sub></i> &#8722;
+<i>x<sub>4</sub></i>) и 2 управляющих входа (<i>A<sub>0</sub>A<sub>1</sub></i>),
+представлена таблицей истинности:</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left
+ style='border-collapse:collapse;margin-left:7.2pt;margin-right:7.2pt'>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>A<sub>0</sub>A<sub>1&nbsp;&nbsp;&nbsp;
+  </sub>x<sub>1 </sub>x<sub>2 </sub>x<sub>3 </sub>x<sub>4</sub></span></i></p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border:solid windowtext 1.5pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='left:0px;
+  position:absolute;z-index:251659264'><img width=99 height=58
+  src="file:///C:\1\lk17.files\image003.gif"
+  alt="Описание: Описание: C:\1\lk17.files\image003.gif"><i><span lang=EN-US>&nbsp;F</span></i></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border-top:none;border-left:
+  solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>0<span
+  lang=EN-US>&nbsp; </span>х&nbsp; х&nbsp; х</p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border-top:none;border-left:
+  solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 <span lang=EN-US>&nbsp;&nbsp;&nbsp;1</span>&nbsp;
+  х&nbsp; х&nbsp; х</p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border-top:none;border-left:
+  solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 1 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>х&nbsp;
+  0&nbsp; х&nbsp; х</p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border-top:none;border-left:
+  solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 1 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>х&nbsp;
+  1&nbsp; х&nbsp; х</p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border-top:none;border-left:
+  solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 0 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>х&nbsp;
+  х&nbsp; 0&nbsp; х</p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border-top:none;border-left:
+  solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 0 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>х&nbsp;
+  х&nbsp; 1&nbsp; х</p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;1</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border-top:none;border-left:
+  solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;border-right:
+  solid windowtext 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 1 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>х&nbsp;
+  х&nbsp; х&nbsp; 0</p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=177 valign=top style='width:106.3pt;border:solid windowtext 1.5pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 1 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>х&nbsp;
+  х&nbsp; х&nbsp; 1</p>
+  </td>
+  <td width=47 valign=top style='width:1.0cm;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;1</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><br clear=all>
+</p>
+
+<p>Для реализации мультиплексора можно использовать логические элементы И, ИЛИ,
+НЕ. Синтезированная схема мультиплексора показана на рис. 17.3а, а его условное
+графическое обозначение (УГО) – на рис. 17.3б.</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0>
+ <tr>
+  <td width=81 style='width:48.6pt;padding:0cm 0cm 0cm 0cm'></td>
+ </tr>
+ <tr>
+  <td style='padding:0cm 0cm 0cm 0cm'></td>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><img width=717 height=422
+  src="file:///C:\1\lk17.files\image004.gif"
+  alt="Описание: Описание: C:\1\lk17.files\image004.gif"></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><br clear=all>
+Мультиплексирование при большом числе входов можно выполнить пирамидальным
+каскадированием мультиплексоров. </p>
+
+<p>Демультиплексор выполняет функцию, обратную мультиплексору, т.е. в
+соответствии с принятой адресацией A<sub>i</sub> направляет информацию с
+единственного входа D на один из M выходов F<sub>j</sub>. При этом на остальных
+выходах будут логические нули (единицы). Принцип работы демультиплексора «из 1
+в 4» иллюстрируется таблицей истинности:</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:47.95pt;border-collapse:collapse'>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>A<sub>0</sub>A<sub>1&nbsp;&nbsp;&nbsp;
+  </sub>D</span></i></p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border:solid windowtext 1.5pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>F</span><sub>1
+  </sub></i><i><span lang=EN-US>F<sub>2 </sub>F<sub>3 </sub>F<sub>4</sub></span></i></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 <span lang=EN-US>&nbsp;&nbsp;&nbsp;0</span></p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0<span lang=EN-US>&nbsp;
+  0</span>&nbsp; <span lang=EN-US>0</span>&nbsp; <span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 0 <span lang=EN-US>&nbsp;&nbsp;&nbsp;1</span>&nbsp;
+  </p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;1&nbsp;
+  0</span>&nbsp; <span lang=EN-US>0</span>&nbsp; <span lang=EN-US>0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 1 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>0</p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0&nbsp;
+  0&nbsp; 0&nbsp; 0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;0 1 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>1</p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0&nbsp;
+  1&nbsp; 0&nbsp; 0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 0 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>0</p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0&nbsp;
+  0&nbsp; 0&nbsp; 0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 0 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>1</p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0&nbsp;
+  0&nbsp; 1&nbsp; 0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border-top:none;border-left:solid windowtext 1.5pt;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 1 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>0</p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0&nbsp;
+  0&nbsp; 0&nbsp; 0</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=95 valign=top style='width:2.0cm;border:solid windowtext 1.5pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'>&nbsp;1 1 <span lang=EN-US>&nbsp;&nbsp;&nbsp;</span>1</p>
+  </td>
+  <td width=118 valign=top style='width:70.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.5pt;border-right:solid windowtext 1.5pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;0&nbsp;
+  0&nbsp; 0&nbsp; 1</span></p>
+  </td>
+ </tr>
+</table>
+
+<p>Структурная схема, реализующая демультиплексор «из 1 в 4» приведена на рис. 17.4а,
+а его условное графическое обозначение – на рис. 17.4б.<br>
+Как и в случае мультиплексора, схему демультиплексора можно реализовать с
+помощью дешифратора. Действительно, ФАЛ демультиплексора отличается от ФАЛ
+дешифратора только наличием входного сигнала D в конъюнкциях с адресными
+входами. Следовательно, объединив выходы дешифратора с входом D с помощью
+стробирующих элементов И, можно получить демультиплексор. Мультиплексоры и
+демультиплексоры часто называют еще цифровыми <i>коммутаторами</i>.</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 align=left>
+ <tr>
+  <td width=155 style='width:93.0pt;padding:0cm 0cm 0cm 0cm'></td>
+ </tr>
+ <tr>
+  <td style='padding:0cm 0cm 0cm 0cm'></td>
+  <td style='padding:0cm 0cm 0cm 0cm'>
+  <p class=MsoNormal><img width=735 height=446
+  src="file:///C:\1\lk17.files\image005.gif"
+  alt="Описание: Описание: C:\1\lk17.files\image005.gif"></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><br clear=all>
+</p>
+
+</div>
+
+</body>
+
+</html>

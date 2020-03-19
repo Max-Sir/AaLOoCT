@@ -1,0 +1,120 @@
+<html>
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+<META HTTP-EQUIV="Content-Language" CONTENT="ru">
+<title>Тест №3</title>
+</head>
+
+<body>
+<center><h3>Тест №3</h3></center>
+<h4>Сложить числа с плавающей запятой, при необходимости выполнить нормализацию, после, округление 'отбрасыванием'.<br></br>Ответ дать в естественной форме записи:</h4>
+<span style='font-size:12.0pt;margin-left: 65%'>
+<script type="text/javascript">
+
+var questions=[
+{
+	text: "<Table cellspacing=20 <tr><td><b>M<sub>A</sub>= 0,1111010</b></td><td><b>p<sub>A</sub>=01111</b></td></tr><tr><td><b>M<sub>B</sub>= 0,1001001</b></td><td><b>p<sub>B</sub>=1010</b></td></tr></Table>",
+	Answer1: "0,1000001",
+	Answer2: "1000"
+},
+{
+	text: "<Table cellspacing=20 <tr><td><b>M<sub>A</sub>= 0,1001111</b></td><td><b>p<sub>A</sub>=1110</b></td></tr><tr><td><b>M<sub>B</sub>= -0,1111101</b></td><td><b>p<sub>B</sub>=1000</b></td></tr></Table>",
+	Answer1: "0,1001101",
+	Answer2: "1110"
+},
+{
+	text: "<Table cellspacing=20 <tr><td><b>M<sub>A</sub>=-0,1000011</b></td><td><b>p<sub>A</sub>=1110</b></td></tr><tr><td><b>M<sub>B</sub>= 0,1110101</b></td><td><b>p<sub>B</sub>=1011</b></td></tr></Table>",
+	Answer1: "-0,1101001",
+	Answer2: "1101"
+},
+{
+	text: "<Table cellspacing=20 <tr><td><b>M<sub>A</sub>= -0,1100110</b></td><td><b>p<sub>A</sub>=0101</b></td></tr><tr><td><b>M<sub>B</sub>= -0,1001110</b></td><td><b>p<sub>B</sub>=0011</b></td></tr></Table>",
+	Answer1: "-0,1011010",
+	Answer2: "0011"
+},
+{
+	text: "<Table cellspacing=20 <tr><td><b>M<sub>A</sub>= 0,1101010</b></td><td><b>p<sub>A</sub>=-0011</b></td></tr><tr><td><b>M<sub>B</sub>= 0,1010011</b></td><td><b>p<sub>B</sub>=-0101</b></td></tr></Table>",
+	Answer1: "0,1111110",
+	Answer2: "-0011"
+},
+{
+	text: "<Table cellspacing=20 <tr><td><b>M<sub>A</sub>=-0,1100101</b></td><td><b>p<sub>A</sub>=-0010</b></td></tr><tr><td><b>M<sub>B</sub>= 0,1000011</b></td><td><b>p<sub>B</sub>=-0001</b></td></tr></Table>",
+	Answer1: "0,1000010",
+	Answer2: "-0011"
+},
+{
+	text: "<Table cellspacing=20 <tr><td><b>M<sub>A</sub>= -0,1011101</b></td><td><b>p<sub>A</sub>=-1011</b></td></tr><tr><td><b>M<sub>B</sub>= 0,1101100</b></td><td><b>p<sub>B</sub>=-1110</b></td></tr></Table>",
+	Answer1: "-0,1010000",
+	Answer2: "-1011"
+},
+{
+	text: "<Table cellspacing=20 <tr><td><b>M<sub>A</sub>= -0,1001110</b></td><td><b>p<sub>A</sub>=1110</b></td></tr><tr><td><b>M<sub>B</sub>= -0,1111101</b></td><td><b>p<sub>B</sub>=1000</b></td></tr></Table>",
+	Answer1: "-0,1011100",
+	Answer2: "-1100"
+},
+];
+
+var yourAns = 0;
+var score = 0;
+var j;
+function Score(){
+   var answerText = "Результаты:\n";
+   for(var i =j=0; i <questions.length; ++i)
+      {
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"";
+	if(document.forms.quiz.elements[j].value!=questions[i].Answer1 || document.forms.quiz.elements[j+1].value!=questions[i].Answer2) 
+	{
+	    answerText=answerText+": Ответ не верный \n";
+	score=1;
+	  }
+      	  else{
+	    answerText=answerText+": Ответ верный \n";
+	    }
+	j=j+2;
+       }
+	if(score==1)
+	{
+   		answerText=answerText+"\nТест не пройден, вернитесь к изучению материала\n";
+	}
+	else
+	{
+   		answerText=answerText+"\nТест успешно пройден.\n";
+	}
+
+   alert(answerText);
+   yourAns =0;
+   score = 0;
+   clearForm("quiz");
+}
+function clearForm(name) {
+   var f = document.forms[name];
+   for(var i = 0; i < f.elements.length-1; ++i) {
+	f.elements[i].value="";
+}
+}
+</script>
+
+<style>
+span.quest {font-weight: bold;}
+</style>
+
+<FORM name="quiz">
+<ol>
+<script>	
+for(var q=0; q<questions.length; ++q) {
+   var question = questions[q];
+   var idx = 1 + q;
+
+   document.writeln('<br><br><li><span class="quest">' + question.text + '</span><br/>');
+   for(var i=0; i<2; i++) {
+	document.writeln('<input type=textbox name="q' + idx +'"<br>');
+}
+}
+</script>
+</ol>
+<center><input type=button onClick="Score()" value="Проверить результаты"></center>
+
+</FORM>
+</body>
+</html>
